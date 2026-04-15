@@ -336,7 +336,7 @@ void *SafePnextCopy(const void *pNext, PNextCopyState* copy_state) {
             first_pNext = safe_pNext;
         }
         pNext = header->pNext;
-        if (prev_pNext && safe_pNext) {
+        if (prev_pNext) {
             prev_pNext->pNext = (VkBaseOutStructure*)safe_pNext;
         }
         if (safe_pNext) {
